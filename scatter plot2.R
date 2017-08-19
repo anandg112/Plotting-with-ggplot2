@@ -1,0 +1,8 @@
+library(ggplot2)
+ggplot(data=mtcars)
+ggplot(data=mtcars, aes(x=mpg,y=hp))
+pl <- ggplot(data=mtcars, aes(x=mpg,y=hp))
+pl + geom_point()
+pl + geom_point() + facet_grid(cyl ~.)
+pl + geom_point() + facet_grid(cyl ~.) + stat_smooth()
+pl + geom_point() + facet_grid(cyl ~.) + stat_smooth() + coord_cartesian(xlim=c(15,25))
